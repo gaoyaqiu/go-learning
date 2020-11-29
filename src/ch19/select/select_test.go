@@ -11,11 +11,6 @@ func service() string {
 	return "Done"
 }
 
-func otherTask() {
-	fmt.Println("working on something else")
-	time.Sleep(time.Microsecond * 100)
-	fmt.Println("Task is done.")
-}
 func AsyncService() chan string {
 	//retCh := make(chan string)
 	retCh := make(chan string, 1) // 更高效的做法
